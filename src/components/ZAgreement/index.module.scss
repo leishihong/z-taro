@@ -1,0 +1,16 @@
+.z-agreement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &-radio {
+    margin-right: 10px;
+  }
+  &-content {
+    font-size: 24px;
+    line-height: 42px;
+    &__text {
+      color: red;
+      cursor: pointer;
+    }
+  }
+}

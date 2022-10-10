@@ -1,0 +1,71 @@
+/* 字体大小和行高
+-------------------------- */
+
+@mixin fs28 {
+    font-size: 56px;
+    line-height: 74px;
+}
+
+@mixin fs24 {
+    font-size: 48px;
+    line-height: 72px;
+}
+
+@mixin fs18 {
+    font-size: 36px;
+    line-height: 54px;
+}
+
+@mixin fs16 {
+    font-size: 32px;
+    line-height: 48px;
+}
+
+@mixin fs14 {
+    font-size: 28px;
+    line-height: 42px;
+}
+
+@mixin fs12 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+@mixin btn-size($padding, $height) {
+    padding: 0 $padding;
+    height: $height;
+    line-height: $height;
+    &.btn-circle {
+        border-radius: $height/2;
+    }
+}
+
+
+/* 骨架图背景颜色&图片
+-------------------------- */
+
+@mixin icon-defaultbg() {
+    background: #f1f1f1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWBAMAAADOL2zRAAAAIVBMVEUAAAB/f3+GhoaSkpKDg4OCgoKCgoKCgoKCgoKBgYGDg4N1oMiYAAAAC3RSTlMAKysrJBMOBhoeCoPTQMYAAAO+SURBVGje7ZrPTxNBFMcXbWm3JydZK+VkJ/iDG2HFEE9dCkQ5UZHIsQiJHqtEEm9FxURPbWKi8dR6MP6ZLiblu9uZnR/vHXrp51w+zLy+2e57b4I5c+ao/Dn6ngghomeXr3miylEiQPSlR1e9mZhgI5oWh0Kl0aWo/go93/xVL0QRu3wV2CGq+LJTAZjb/CBs/HBVlYWdfcdkTxxckdsR6AgXbruoQuHGgLBDxi7HwpVl64EW7nT5gUf4+akF9gnLIi0My+Iv7NjTVS9W1YQvo0LXW2/XnUJX4u2K6CdRZWBLCH5aVAQF/QkvkVwt/haxSfMW+ZsMia4B+/yAOjtRwTb3EQGieJ+bEVDFa7yMAO043mCGC8tKUX5/qMtK6XLDhWXF08doTF9W/GTKdUFXxZtTLvoOU3ihx7LU4IecZcX5473AUcVr3IdEG67HzK8xisEm7wRF7Rg84j2f+wdQrcseJyXqwVlGJbNJUfXdYS8IMyrZZ5zs9G/LE5dMadHTa+8qxBmVvEt+WVoKrmhDJR+QUhXv4p8mwUq5T3rYo947gUreI6U9flvPoJIPAzB0VzUmeXkTKrlKOkJ4DS/F8poVkgvFcSj1LmfVbuasyAwE11LmEJd5rqgbaF1N4eVC3OGCys+FuKsu4edC3FWX8HMh7qAKla8rGgVaV3O6LEqcv0IQQuXp6qsvpVDlXENCX+kGVKLh8czZC1TepS48aUGH0Dp7JaW2KDom1Igfpb72GDsnFtgqKLsX/FWVpgC33H5rGyOHtkgrm8OuKlAqyr6yUWXvZXSzm3c9OaCj1rY4RJ5N8eKOx4XXBhEVpD049lQh9GqZvOClQriQXiA0pKi9ATEw1zA7RlVQNTU0p1VeXVhjzffLoFFzaMn0j9oDr571suY7Rkmx4dXRbelyD4XOyKfR3C2KwDZKaMfIR/plo2QypUTN9ggvQWVb2NjWmSv/3x8YGaJlbSQnuZLQ8FV27C3W0zhP33F4VNfl35RrRb/LWuLQ46vkVSgm8p+6cGqwHmRV66hy1GDZf9RLeVXKjmn+h4wwbhL1Vy//Caj0WwQnUE1YfRmA90P3kUcVcQdPJ2Pt889ek7C2qpJCRD8vDw+/Jk6zAHCmqprUGUVNVRFmJ4j+uo+qbpo1KSrGEOy5zMIbzpU9VFiWfWHske0igkWdZYLfzqpl++x3Cyr2hLsKFWcmjfCTR4/qLgnTbc7dghnceWDdxeDfEeHfXeFvc3cWd33sd5BmfjcqpQIb7mzROc/cJZszZ47CPyvAGEHLXV4CAAAAAElFTkSuQmCC) no-repeat center center;
+    background-size: 30%;
+}
+
+@mixin default-bg-size() {
+    background-size: 890px auto;
+}
+
+// 单行文本截断省略号
+@mixin text-overflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 多行文本截断省略号
+@mixin line-clamp($num) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $num;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}

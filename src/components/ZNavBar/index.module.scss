@@ -1,0 +1,27 @@
+.z-nav-bar {
+  position: fixed;
+  left: 0;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 88px;
+  background: #fff;
+  .z-nav-bar__left,
+  .z-nav-bar__title,
+  .z-nav-bar__right {
+    flex: 1;
+  }
+  .z-nav-bar__left {
+    display: flex;
+  }
+  .z-nav-bar__icon {
+    width: 88px;
+    height: 88px;
+  }
+  .z-nav-bar__title {
+    text-align: center;
+  }
+}
